@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.films.FilmsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Les films de Nadège"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginVertical="20dp"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rechercher:"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="30dp"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <SearchView
+                android:id="@+id/idSV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:iconifiedByDefault="false"
+                android:padding="4dp"
+                android:queryHint="Rechercher un titre" />
+
+            <ListView
+                android:id="@+id/idLVProgrammingLanguages"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:visibility="gone" />
+
+            <!-- Action-Aventure -->
+            <TextView
+                android:id="@+id/titreActionAventure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Action-Aventure"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewActionAventure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Animation -->
+            <TextView
+                android:id="@+id/titreAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Animation"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Biopic -->
+            <TextView
+                android:id="@+id/titreBiopic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Biopic"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewBiopic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Comédie -->
+            <TextView
+                android:id="@+id/titreComedie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comédie"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewComedie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Comédie dramatique -->
+            <TextView
+                android:id="@+id/titreComedieDramatique"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comédie dramatique"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewComedieDramatique"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Comédie musicale -->
+            <TextView
+                android:id="@+id/titreComedieMusicale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comédie musicale"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewComedieMusicale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Comédie romantique -->
+            <TextView
+                android:id="@+id/titreComedieRomantique"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comédie romantique"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewComedieRomantique"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Court métrage -->
+            <TextView
+                android:id="@+id/titreCourtMetrage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Court métrage"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCourtMetrage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Documentaire -->
+            <TextView
+                android:id="@+id/titreDocumentaire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Documentaire"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewDocumentaire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Drame -->
+            <TextView
+                android:id="@+id/titreDrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drame"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewDrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Fantastique -->
+            <TextView
+                android:id="@+id/titreFantastique"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fantastique"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewFantastique"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Guerre -->
+            <TextView
+                android:id="@+id/titreGuerre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guerre"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewGuerre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Historique -->
+            <TextView
+                android:id="@+id/titreHistorique"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Historique"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewHistorique"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Horreur -->
+            <TextView
+                android:id="@+id/titreHorreur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Horreur"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewHorreur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Retransmission -->
+            <TextView
+                android:id="@+id/titreRetransmission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Retransmission"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewRetransmission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Science-fiction -->
+            <TextView
+                android:id="@+id/titreScienceFiction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Science-fiction"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewScienceFiction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Thriller -->
+            <TextView
+                android:id="@+id/titreThriller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thriller"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewThriller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+            <!-- Western -->
+            <TextView
+                android:id="@+id/titreWestern"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Western"
+                android:visibility="gone"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewWestern"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_view_design" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

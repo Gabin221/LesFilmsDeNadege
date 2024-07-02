@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Les films de Nadège</string>
+    <string name="title_films">Les films</string>
+    <string name="title_ajouter">Modifier la liste des films</string>
+</resources>

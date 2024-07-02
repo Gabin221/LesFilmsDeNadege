@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_films"
+        android:icon="@drawable/ic_films_black_24dp"
+        android:title="@string/title_films" />
+
+    <item
+        android:id="@+id/navigation_ajouter"
+        android:icon="@drawable/ic_ajouter_black_24dp"
+        android:title="@string/title_ajouter" />
+
+</menu>
