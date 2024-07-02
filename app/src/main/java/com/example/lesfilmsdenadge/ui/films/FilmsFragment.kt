@@ -226,6 +226,7 @@ class FilmsFragment : Fragment() {
                             }
                         }
                         programmingLanguagesLV.visibility = if (listeFilmsFiltree.isEmpty()) GONE else VISIBLE
+                        setListViewHeightBasedOnChildren(programmingLanguagesLV)
                     } else {
                         programmingLanguagesLV.visibility = GONE
                     }
@@ -237,6 +238,24 @@ class FilmsFragment : Fragment() {
             Toast.makeText(requireContext(), "Erreur lors de la récupération des données Firestore: ${e.message}", Toast.LENGTH_SHORT).show()
         }
         return root
+    }
+
+    private fun setListViewHeightBasedOnChildren(listView: ListView) {
+        val listAdapter = listView.adapter ?: return
+
+        var totalHeight = 0
+        for (i in 0 until listAdapter.count) {
+            val listItem = listAdapter.getView(i, null, listView)
+            listItem.measure(
+                View.MeasureSpec.makeMeasureSpec(listView.width, View.MeasureSpec.UNSPECIFIED),
+                View.MeasureSpec.UNSPECIFIED
+            )
+            totalHeight += listItem.measuredHeight
+        }
+
+        val params = listView.layoutParams
+        params.height = totalHeight + (listView.dividerHeight * (listAdapter.count - 1))
+        listView.layoutParams = params
     }
 
     private fun chargerFilms() {
