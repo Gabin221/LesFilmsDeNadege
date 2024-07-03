@@ -184,6 +184,13 @@ class AjouterFragment : Fragment() {
                 }
                 programmingLanguagesList.add(Pair(displayString, category))
                 listAdapter.notifyDataSetChanged()
+
+                editTextTitle.getText().clear()
+                editTextDirector.getText().clear()
+                editTextReleaseDate.getText().clear()
+                spinnerSteelbook.setSelection(0)
+                editTextImage.getText().clear()
+                spinnerCategory.setSelection(0)
             }.addOnFailureListener { e ->
                 Toast.makeText(requireContext(), "Erreur lors de l'ajout du film : $e", Toast.LENGTH_SHORT).show()
             }
@@ -198,6 +205,7 @@ class AjouterFragment : Fragment() {
                     Toast.makeText(requireContext(), "Film supprimé avec succès", Toast.LENGTH_SHORT).show()
                     programmingLanguagesList.removeIf { it.first.contains(title) && it.second == category }
                     listAdapter.notifyDataSetChanged()
+                    searchView.setQuery("", false)
                 }.addOnFailureListener { e ->
                     Toast.makeText(requireContext(), "Erreur lors de la suppression du film : $e", Toast.LENGTH_SHORT).show()
                 }
